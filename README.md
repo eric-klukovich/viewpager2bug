@@ -14,11 +14,10 @@ This sample app showcases a bug found in ViewPager2 when launching a dialog frag
 You can view the same implementation using Viewpager (tap the `ViewPager` button) and the app does not crash when restoring the dialog
 
 
-### App Flow (Uses Jetpack Navigation)
+### App Flow
 
 `MainActivity` starts `MainFragment`
 
 `MainFragment` can launch `ViewPagerFragment` or `ViewPager2Fragment`
 
 `DemoFragment` is the fragment displayed by both ViewPagers and launches `DemoDialogFragment`
-
