@@ -2,6 +2,7 @@
 
 This sample app showcases a bug found in ViewPager2 when launching a dialog fragment with a target fragment. The target fragment inside the dialog it will be returned as null with DNKA on when using ViewPager2. This does not happen when using ViewPager.
 
+
 ### Steps to Replicate
 1. Enable `Do Not Keep Activities` in the developer settings
 2. Launch the app and tap the `ViewPager2` button
@@ -11,3 +12,13 @@ This sample app showcases a bug found in ViewPager2 when launching a dialog frag
 6. App will crash when trying to restore (because the target fragment is null)
 
 You can view the same implementation using Viewpager (tap the `ViewPager` button) and the app does not crash when restoring the dialog
+
+
+### App Flow (Uses Jetpack Navigation)
+
+`MainActivity` starts `MainFragment`
+
+`MainFragment` can launch `ViewPagerFragment` or `ViewPager2Fragment`
+
+`DemoFragment` is the fragment displayed by both ViewPagers and launches `DemoDialogFragment`
+
