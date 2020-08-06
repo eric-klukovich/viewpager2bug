@@ -23,7 +23,11 @@ class DemoDialogFragment : DialogFragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
         Log.d("DemoDialogFragment", "Has Target Fragment: ${targetFragment != null}")
+
+        // This is where the crash occurs because the targetFragment is null when you come back
+        // from Do Not Keep Activities a second time
         listener = targetFragment as DemoListener
     }
 
