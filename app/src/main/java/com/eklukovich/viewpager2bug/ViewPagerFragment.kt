@@ -12,7 +12,7 @@ class ViewPagerFragment : Fragment(R.layout.viewpager_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val viewPager = view.findViewById<ViewPager>(R.id.pager)
-        viewPager.adapter = ViewPagerAdapter(parentFragmentManager)
+        viewPager.adapter = ViewPagerAdapter(childFragmentManager)
 
         GlobalScope.launch {
 
