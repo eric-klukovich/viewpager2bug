@@ -17,6 +17,7 @@ class ViewPager2Fragment : Fragment(R.layout.viewpager2_fragment) {
         }
 
         GlobalScope.launch {
+
             // Delay to represent wait for fetch from storage or network
             delay(50)
 
